@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TodoSystem</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="create_new_todo">Create new todo</string>
+    <string name="create">Create</string>
+
+</resources>

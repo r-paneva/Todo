@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.mikepenz:materialdrawer-6.0.9">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.9.aar/a17842bde199c2f26095ed2e3881215d/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.9.aar/a17842bde199c2f26095ed2e3881215d/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mikepenz/materialdrawer/6.0.9/b9765e52162557f97a1f99c44cc4c9614d70e308/materialdrawer-6.0.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

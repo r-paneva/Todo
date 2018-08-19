@@ -29,11 +29,6 @@ public class TodoCreateActivity extends BaseDrawerActivity {
                 .beginTransaction()
                 .replace(R.id.content, mTodoCreateFragment)
                 .commit();
-
-//        db = FirebaseFirestore.getInstance();
-//        Todo item = new Todo("newTodos", "some description blablabla", false);
-//        db.collection("todos").add(item);
-
     }
 
     @Override

@@ -22,6 +22,7 @@ public class TodoDetailsFragment extends android.app.Fragment {
     private Button mTodoSetDoneButton;
     private boolean mTodoStat;
     private String pid;
+    private Button mTodoDeleteButton;
 
 
     public TodoDetailsFragment() {
@@ -59,31 +60,43 @@ public class TodoDetailsFragment extends android.app.Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        buttonClicked(v);
+                        FirebaseFirestore.getInstance()
+                                .collection("todos")
+                                .document(pid)
+                                .update("isActive", !mTodoStat);
+
+                        mTodoStat = !mTodoStat;
+                        ButtonStatText(mTodoStat);
                     }
                 });
+
+//        mTodoDeleteButton = view.findViewById(R.id.btn_delete_todo);
+//        mTodoSetDoneButton.setOnClickListener(
+//                new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        FirebaseFirestore.getInstance()
+//                                .collection("todos")
+//                                .document(pid)
+//                                .delete();
+//                    }
+//                }
+//        );
 
         return view;
     }
 
     private void buttonClicked(View view) {
 
-        FirebaseFirestore.getInstance()
-                .collection("todos")
-                .document(pid)
-                .update("isActive", !mTodoStat);
 
-        mTodoStat=!mTodoStat;
-        ButtonStatText(mTodoStat);
     }
 
-    public void ButtonStatText(boolean todoStat){
-        String text="";
-        if(todoStat)text="To do";
-        else text="Done";
+    public void ButtonStatText(boolean todoStat) {
+        String text = "";
+        if (todoStat) text = "To do";
+        else text = "Done";
         mTodoSetDoneButton.setText(text);
     }
-
 
     public static TodoDetailsFragment instance() {
         return new TodoDetailsFragment();
